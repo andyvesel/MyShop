@@ -3,5 +3,5 @@ require 'sinatra'
 require 'sinatra/reloader'
 
 get '/' do
-  erb "This is the test"
+  erb "This is the barbershop"
 end
