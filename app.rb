@@ -17,3 +17,7 @@ end
 get '/visit' do
   erb :visit
 end
+
+post '/visit' do
+  erb :visit
+end
