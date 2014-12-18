@@ -2,19 +2,26 @@
 
 <form action="/visit" method="POST" role="form">
   <div class="form-group">
-    <label for="exampleInputEmail1">Ваше имя</label>
-    <input name="username" type="text" class="form-control" id="exampleInputEmail1">
+    <label>Ваше имя</label>
+    <input name="username" type="text" class="form-control" placeholder="Можно с фамилией">
   </div>
  
    <div class="form-group">
-    <label for="exampleInputEmail1">Ваш телефон</label>
-    <input name="username" type="text" class="form-control" id="exampleInputEmail1">
+    <label>Ваш телефон</label>
+    <input name="phone" type="text" class="form-control" placeholder="В формате 89xxxxxxxx">
   </div>
 
     <div class="form-group">
-    <label for="exampleInputEmail1">Ждать вас когда?</label>
-    <input name="username" type="text" class="form-control" id="exampleInputEmail1">
+    <label>Когда вас ждать?</label>
+    <input name="time" type="text" class="form-control" placeholder="Укажите дату и время">
   </div>
-
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <label>Выберите парикмахера</label>
+  <select class="form-control">
+    <option>Walt</option>
+    <option>Jessie</option>
+    <option>Badger</option>
+    <option>Gus</option>
+  </select>
+  <p></p>
+  <button type="submit" class="btn btn-primary">Кнопка</button>
 </form>
