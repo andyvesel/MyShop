@@ -1,1 +1,1 @@
-//this is script
+alert('Hi!');
