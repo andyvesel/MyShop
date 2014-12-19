@@ -20,10 +20,11 @@ end
 
 post '/visit' do
 
-  @username = params[:username]
-  @phone = params[:phone]
-  @time = params[:time]
-  @your_barber = params[:your_barber]
+  @username     = params[:username]
+  @phone        = params[:phone]
+  @time         = params[:time]
+  @your_barber  = params[:your_barber]
+  @color        = params[:color]
 
-  erb "Ок, #{@username}. Your barber is #{@your_barber}. We'll be waiting for you at #{@time} and call you at number #{@phone}"
+  erb "Ок, #{@username}. Your barber is #{@your_barber}. We'll be waiting for you at #{@time} and call you at number #{@phone}. Color: #{@color}"
 end
