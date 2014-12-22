@@ -31,11 +31,11 @@ post '/visit' do
         :time => 'Введите дату и время', 
         :your_barber => 'Укажите парикмахера', }
 
-  hh.each do |key, value|
-    if params[key] == ''
-      @error = hh[key]
-      return erb :visit
-    end
+ @error = hh.select { |key,_| params[key] == ''}.values.join(", ")
+  
+  if @error != ''
+    return erb :visit
   end
+  
   erb "Ок, #{@username}. Your barber is #{@your_barber}. We'll be waiting for you at #{@time} and call you at number #{@phone}. Color: #{@color}"
 end
