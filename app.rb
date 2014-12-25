@@ -4,7 +4,7 @@ require 'sinatra/reloader'
 require 'sqlite3'
 
 def get_db
-  return SQLite3::Database.open 'Barbersop.db'
+  return SQLite3::Database.open 'Barbershop.db'
 end
 
 configure do
