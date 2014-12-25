@@ -3,18 +3,17 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'sqlite3'
 
-configure do 
-  db = SQLite3::Database.new 'Barbershop.db'
-  db.execute "CREATE TABLE IF NOT EXISTS Users
+configure do
+  @db = SQLite3::Database.new 'Barbersop.db'
+  @db.execute "CREATE TABLE IF NOT EXISTS Users 
   (
     id integer PRIMARY KEY AUTOINCREMENT,
-    Name text,
-    Phone text,
-    Datestamp text,
-    Barber text,
-    Color text
-    )"
-  db.close
+    name text,phone text,
+    datestamp text,
+    barber text,
+    color text
+  );"
+  @db.close
 end
 
 get '/' do
