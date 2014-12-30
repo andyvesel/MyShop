@@ -1,6 +1,14 @@
 <h2>Записаться</h2>
 
 <form action="/visit" method="POST" role="form">
+  <script type="text/javascript">
+    $(function(){
+
+      $('#color').simplecolorpicker();
+      $('#datetimepicker').datetimepicker();
+    });
+  </script>
+
   <div class="form-group">
     <label>Ваше имя</label>
     <input name="username" type="text" class="form-control" placeholder="Введите имя" value="<%=@username %>">
@@ -13,7 +21,7 @@
 
     <div class="form-group">
     <label>Когда вас ждать?</label>
-    <input name="time" type="text"  class="form-control" placeholder="Укажите дату и время" value="<%=@time %>">
+    <input id="datetimepicker" name="time" type="text"  class="form-control" placeholder="Укажите дату и время" value="<%=@time %>">
   </div>
   <label>Выберите парикмахера</label>
   <select class="form-control" name="your_barber">
@@ -44,8 +52,8 @@
    <button type="submit" class="btn btn-primary">Кнопка</button>
 
 </form>
+<!--  <script type="text/javascript">
+    $('#color').simplecolorpicker('selectColor', '#7bd148');
+  </script> 
 
-<script type="text/javascript">
-  $('#color').simplecolorpicker('selectColor', '#7bd148');
-</script>
 
