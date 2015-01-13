@@ -28,6 +28,11 @@ get '/visit' do
   erb :visit
 end
 
+get '/showusers' do
+  erb :showusers
+end
+
+
 post '/visit' do
 
   @username     = params[:username]
